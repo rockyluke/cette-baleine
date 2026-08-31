@@ -23,6 +23,6 @@ champs `altname_fr` et `altname_en` rassemblent les noms alternatifs séparés p
 `|`. Les océans, mers et zones utilisent des identifiants neutres traduits par
 le site.
 
-Une nouvelle espèce se crée à partir de [`MODELE.md`](MODELE.md). Sa fiche doit
+Une nouvelle espèce se crée à partir de [`template.md`](template.md). Sa fiche doit
 être placée dans [`current/`](current/), puis son chemin ajouté à `markdownFiles`
 dans [`docs/app.js`](docs/app.js).

@@ -14,8 +14,8 @@ const markdownFiles = [
 
 const lang = document.documentElement.lang === "en" ? "en" : "fr";
 const messages = {
-  fr: { all: "Tous", allFeminine: "Toutes", current: "Baleines actuelles", extinct: "Espèces disparues", related: "Groupes apparentés", fictional: "Baleines fictives", whale: "baleine", whales: "baleines", game: "Jeu vidéo", movie: "Film", series: "Série", fictionalBadge: "Fictive", extinctBadge: "Disparue", relatedBadge: "Groupe apparenté", source: "Source", sources: "Sources", loadError: "Le catalogue n'a pas pu être chargé.", viewMarkdown: "Consulter les fichiers Markdown sur GitHub." },
-  en: { all: "All", allFeminine: "All", current: "Living whales", extinct: "Extinct species", related: "Related groups", fictional: "Fictional whales", whale: "whale", whales: "whales", game: "Video game", movie: "Movie", series: "TV series", fictionalBadge: "Fictional", extinctBadge: "Extinct", relatedBadge: "Related group", source: "Source", sources: "Sources", loadError: "The catalog could not be loaded.", viewMarkdown: "Browse the Markdown files on GitHub." },
+  fr: { all: "Tous", allFeminine: "Toutes", current: "Baleines actuelles", extinct: "Espèces disparues", fictional: "Baleines fictives", whale: "baleine", whales: "baleines", game: "Jeu vidéo", movie: "Film", series: "Série", fictionalBadge: "Fictive", extinctBadge: "Disparue", source: "Source", sources: "Sources", loadError: "Le catalogue n'a pas pu être chargé.", viewMarkdown: "Consulter les fichiers Markdown sur GitHub." },
+  en: { all: "All", allFeminine: "All", current: "Living whales", extinct: "Extinct species", fictional: "Fictional whales", whale: "whale", whales: "whales", game: "Video game", movie: "Movie", series: "TV series", fictionalBadge: "Fictional", extinctBadge: "Extinct", source: "Source", sources: "Sources", loadError: "The catalog could not be loaded.", viewMarkdown: "Browse the Markdown files on GitHub." },
 }[lang];
 const oceanNames = {
   arctic: { fr: "Océan Arctique", en: "Arctic Ocean" }, atlantic: { fr: "Océan Atlantique", en: "Atlantic Ocean" },
@@ -117,7 +117,6 @@ function createCard(whale) {
   const badge = fragment.querySelector(".status-badge");
   if (whale.type === "fictional") { card.classList.add("fictional"); badge.textContent = messages.fictionalBadge; badge.hidden = false; }
   if (whale.type === "extinct") { card.classList.add("extinct"); badge.textContent = lang === "fr" ? `${messages.extinctBadge} - ${whale.extinct_million_years.replace(".", ",")} millions d'années` : `${messages.extinctBadge} - ${whale.extinct_million_years} million years`; badge.hidden = false; }
-  if (whale.type === "related") { card.classList.add("related"); badge.textContent = messages.relatedBadge; badge.hidden = false; }
   renderPlaces(fragment.querySelector(".places"), whale);
   const altnameRow = fragment.querySelector(".altname-row");
   altnameRow.hidden = whale.altnames.length === 0;
@@ -171,7 +170,7 @@ function renderFilters() {
     button.dataset.sea = value; button.textContent = label; button.setAttribute("aria-pressed", String(value === state.sea));
     button.addEventListener("click", () => { state.sea = value; render(); }); return button;
   }));
-  const types = [{ label: messages.all, value: "all" }, { label: messages.current, value: "current" }, { label: messages.extinct, value: "extinct" }, { label: messages.related, value: "related" }, { label: messages.fictional, value: "fictional" }];
+  const types = [{ label: messages.all, value: "all" }, { label: messages.current, value: "current" }, { label: messages.extinct, value: "extinct" }, { label: messages.fictional, value: "fictional" }];
   elements.typeFilters.replaceChildren(...types.map(({ label, value }) => {
     const button = document.createElement("button"); button.type = "button"; button.className = "filter-button type-button";
     button.dataset.type = value; button.textContent = label; button.setAttribute("aria-pressed", String(value === state.type));
