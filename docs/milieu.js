@@ -63,7 +63,7 @@ const milieux = {
 const milieu = milieux[document.body.dataset.milieu];
 if (milieu) {
   const name = milieu.name[lang];
-  document.title = `${name} - Ce requin`;
+  document.title = `${name} - Cette baleine`;
   document.querySelector(".back-link").textContent = labels.back;
   document.querySelector(".milieu-kind").textContent = milieu.kind[lang];
   document.querySelector("h1").textContent = name;
@@ -78,5 +78,5 @@ if (milieu) {
   document.querySelector(".map-caption-prefix").textContent = `${labels.map} `;
   const mapLink = document.querySelector(".map-source"); mapLink.href = milieu.mapPage;
   const wikiLink = document.querySelector(".wiki-source"); wikiLink.href = milieu.wiki[lang]; wikiLink.textContent = labels.wiki;
-  try { localStorage.setItem("ce-requin-language", lang); } catch {}
+  try { localStorage.setItem("cette-baleine-language", lang); } catch {}
 }

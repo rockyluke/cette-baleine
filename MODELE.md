@@ -27,7 +27,7 @@ source_wikipedia_fr: https://fr.wikipedia.org/
 source_wikipedia_en: https://en.wikipedia.org/
 source_worms: https://www.marinespecies.org/
 source_inpn: https://inpn.mnhn.fr/
-source_fishbase: https://www.fishbase.org/
+source_fishbase:
 source_scientific:
 universe_games:
 universe_movies:
