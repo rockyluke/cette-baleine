@@ -10,6 +10,15 @@ const markdownFiles = [
   "current/kogia-breviceps.md",
   "current/kogia-sima.md",
   "current/balaenoptera-omurai.md",
+  "current/balaenoptera-acutorostrata.md",
+  "current/globicephala-melas.md",
+  "current/orcinus-orca.md",
+  "current/pseudorca-crassidens.md",
+  "current/ziphius-cavirostris.md",
+  "current/mesoplodon-densirostris.md",
+  "current/mesoplodon-bidens.md",
+  "current/phocoena-phocoena.md",
+  "current/delphinapterus-leucas.md",
   "fictional/moby-dick.md",
 ];
 

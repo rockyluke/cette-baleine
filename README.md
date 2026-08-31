@@ -9,9 +9,9 @@ dans [`docs/`](docs/).
 
 ## Catalogue
 
-Le catalogue contient onze espèces actuelles — baleines à fanons, baleine
-grise, grand cachalot et cachalots du genre *Kogia* — ainsi que Moby Dick dans
-la catégorie des baleines fictives. Chaque fiche utilise un nom de fichier en
+Le catalogue contient vingt espèces actuelles de cétacés — baleines à fanons,
+cachalots, baleines à bec, delphinidés et marsouin — ainsi que Moby Dick dans la
+catégorie des baleines fictives. Chaque fiche utilise un nom de fichier en
 minuscules.
 
 Les fiches utilisent WoRMS comme référence taxonomique, des références
