@@ -10,6 +10,7 @@ const markdownFiles = [
   "current/kogia-breviceps.md",
   "current/kogia-sima.md",
   "current/balaenoptera-omurai.md",
+  "fictional/moby-dick.md",
 ];
 
 const lang = document.documentElement.lang === "en" ? "en" : "fr";
